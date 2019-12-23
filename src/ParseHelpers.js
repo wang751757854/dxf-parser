@@ -14,14 +14,14 @@ export function getAcadColor(index) {
  * @param {*} scanner 
  */
 export function parsePoint(scanner) {
-	console.log("parsePoint")
-	console.log(scanner)
+	
     var point = {};
 
     // Reread group for the first coordinate
     scanner.rewind();
     var curr = scanner.next();
-
+	console.log("curr")
+	console.log(curr)
     var code = curr.code;
     point.x = curr.value;
 
