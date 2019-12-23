@@ -6,6 +6,10 @@ export default function EntityParser() {}
 EntityParser.ForEntityName = 'MTEXT';
 
 EntityParser.prototype.parseEntity = function(scanner, curr) {
+	console.log("-------1-begin-------")
+	console.log("scanner")
+	console.log(scanner)
+	console.log("--------1-end------")
     var entity = { type: curr.value };
 		curr = scanner.next();
     while(curr !== 'EOF') {
@@ -19,6 +23,10 @@ EntityParser.prototype.parseEntity = function(scanner, curr) {
                 entity.text ? entity.text += curr.value : entity.text = curr.value;
                 break;
             case 10:
+			console.log("-------2-begin-------")
+	console.log("case 10")
+	console.log(scanner)
+	console.log("--------2-end------")
                 entity.position = helpers.parsePoint(scanner);
                 break;
             case 40:
