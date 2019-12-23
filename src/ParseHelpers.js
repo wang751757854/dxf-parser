@@ -14,6 +14,8 @@ export function getAcadColor(index) {
  * @param {*} scanner 
  */
 export function parsePoint(scanner) {
+	console.log("parsePoint")
+	console.log(scanner)
     var point = {};
 
     // Reread group for the first coordinate
